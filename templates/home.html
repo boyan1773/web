@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<style>
+  .導航欄
+  {
+    position: fixed;
+    width: 1920px;
+    height: 71px;
+    left: 0px;
+    top: 0px;
+
+    background: #A7D7C4;
+  }
+  .系名{
+    position: absolute;
+    width: 500px;
+    height: 71px;
+    left: 100px;
+    top: 0px;
+
+  }
+  .不分系
+  {
+    position: absolute;
+    width: 500px;
+    height: 31px;
+    left: 0px;
+    top: 11px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #5C8D89;
+  }
+  .不分系英文
+  {
+    position: absolute;
+    width: 258px;
+    height: 21px;
+    left: 0px;
+    top: 42px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #5C8D89;
+  }
+  .導航欄字體
+  { position: absolute;
+    top: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #5C8D89;
+  }
+  .最新消息選項
+  {
+    position: absolute;
+    width: 205px;
+    height: 51px;
+    left: 1100px;
+    top: 10px;
+  }
+  .line
+  { 
+    position: absolute;
+    bottom: 10px;
+    width: 100px;
+    height: 0px;
+
+    border: 2px solid #74B49B;
+  }
+  .課程規劃選項
+  {
+    position: absolute;
+    width: 205px;
+    height: 51px;
+    left: 1305px;
+    top: 10px;
+  }
+
+  .師資簡介選項
+  {
+    position: absolute;
+    width: 205px;
+    height: 51px;
+    left: 1510px;
+    top: 10px;
+  }
+  .招生資訊選項
+  {
+    position: absolute;
+    width: 205px;
+    height: 51px;
+    left: 1715px;
+    top: 10px;
+  }
+  .介紹欄1
+  {
+    position: absolute;
+    width: 1250px;
+    height: 520px;
+    left: 50px;
+    top: 121px;
+
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+  }
+  .介紹欄2
+  {
+    position: absolute;
+    width: 1250px;
+    height: 520px;
+    left: 50px;
+    top: 691px;
+
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+  }
+  .介紹欄背景
+  {
+    position: absolute;
+    width: 470px;
+    height: 520px;
+    left: 780px;
+    top: 0px;
+
+    background: #F4F9F4;
+    border-radius: 0px 46px 46px 0px;
+  }
+  .介紹欄title
+  {
+    position: absolute;
+    width: 450px;
+    height: 100px;
+    left: 790px;
+    top: 50px;
+  }
+  .榮譽榜title
+  {
+    position: absolute;
+    width: 122px;
+    height: 44px;
+    left: 204px;
+    top: 40px;
+  }
+  .介紹欄圖片
+  {
+    position: absolute;
+    width: 780px;
+    height: 520.06px;
+    left: 0px;
+    top: 0px;
+
+    background: url('{%static"discussion.jpg"%}');
+  }
+  .title字形
+  {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #5C8D89;
+  }
+  .介紹欄內文
+  {
+    position: absolute;
+    width: 370px;
+    height: 310px;
+    left: 830px;
+    top: 180px;
+  }
+  .內文字形
+  {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: #5C8D89;
+  }
+  .榮譽榜
+  {
+    position: absolute;
+    width: 530px;
+    height: 1130px;
+    left: 1350px;
+    top: 121px;
+
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+  }
+  .榮譽榜背景
+  {
+    position: absolute;
+    width: 530px;
+    height: 1130px;
+    left: 0px;
+    top: 0px;
+
+    background: #F4F9F4;
+    border-radius: 46px;
+  }
+  .榮譽榜title背景
+  {
+    position: absolute;
+    width: 530px;
+    height: 130px;
+    left: 0px;
+    top: 0px;
+
+    background: #A7D7C4;
+    border-radius: 46px 46px 0px 0px;
+  }
+  .榜單1
+  {
+    position: absolute;
+    width: 430px;
+    height: 425px;
+    left: 50px;
+    top: 180px;
+
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+  }
+  .榜單介紹欄
+  {
+    position: absolute;
+    width: 430px;
+    height: 172px;
+    left: 0px;
+    top: 253px;
+
+    background: #A7D7C4;
+    border-radius: 0px 0px 46px 0px;
+  }
+  .榜單圖片
+  {
+    position: absolute;
+    width: 430px;
+    height: 286.7px;
+    left: 0px;
+    top: 0px;
+
+    background: url('{%static"award.jpg"%}');
+  }
+  .榜單2
+  {
+    position: absolute;
+    width: 430px;
+    height: 425px;
+    left: 50px;
+    top: 655px;
+
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+  }
+  .底欄
+  {
+    position: absolute;
+    width: 1920px;
+    height: 200px;
+    left: 0px;
+    top: 1301px;
+
+    background: #A7D7C4;
+  }
+  .底欄文字
+  {
+    position: absolute;
+    width: 271px;
+    height: 138px;
+    left: 626px;
+    top: 31px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: #5C8D89;
+  }
+  .校徽
+  {
+    position: absolute;
+    width: 366px;
+    height: 68px;
+    left: 174px;
+    top: 66px;
+
+    background: url('{%static "logo.png"%}');
+  }
+</style>
+  <head>
+    <title>boyan</title>
+      {% load static%}
+  </head>
+  <body>
+    <dev class="導航欄">
+      <dev" class="系名">
+        <dev class="不分系">高瞻科技不分系學士學位學程</dev>
+        <dev class="不分系英文">cross college elite tech program </dev>
+      </dev>
+      <a href="/news" class="最新消息選項">
+        <dev class="導航欄字體">最新消息 News</dev>
+        <dev class="line"></dev>
+      </a>
+      <a href="/course" class="課程規劃選項">
+        <dev class="導航欄字體">課程規劃 Course</dev>
+        <dev class="line"></dev>
+      </a>
+      <a href="/teachers" class="師資簡介選項">
+        <dev class="導航欄字體">師資簡介 Teachers</dev>
+        <dev class="line"></dev>
+      </a>
+      <a href="/admissions" class="招生資訊選項">
+        <dev class="導航欄字體">招生資訊 Admissions</dev>
+        <dev class="line"></dev>
+      </a>
+    </dev>
+    <dev class="介紹欄1">
+      <dev class="介紹欄背景"></dev>
+      <dev class="介紹欄title title字形">「君子不器」— <br>&emsp;&emsp;&emsp;&emsp;是專才也是通才</dev>
+      <dev class="介紹欄內文 內文字形">模組課程、客製化學習、跨域學習、PBL專題實作等學習模式，讓您的才能和思想不拘泥在某種「專業」的框架，能以多元、靈活的整合思維能力面對未來、迎戰未來。</dev>
+      <dev class="介紹欄圖片"></dev>
+    </dev>
+    <dev class="介紹欄2">
+      <dev class="介紹欄背景"></dev>
+      <dev class="介紹欄title title字形">「君子不器」— <br>&emsp;&emsp;&emsp;&emsp;是專才也是通才</dev>
+      <dev class="介紹欄內文 內文字形">模組課程、客製化學習、跨域學習、PBL專題實作等學習模式，讓您的才能和思想不拘泥在某種「專業」的框架，能以多元、靈活的整合思維能力面對未來、迎戰未來。</dev>
+      <dev class="介紹欄圖片"></dev>
+    </dev>
+    <dev class="榮譽榜">
+      <dev class="榮譽榜背景">
+        <dev class="榮譽榜title背景"></dev>
+        <dev class="榮譽榜title title字形">榮譽榜</dev>
+        <dev class="榜單1">
+          <dev class="榜單介紹欄">
+            <dev class="榜單內文 內文字形"> </dev>
+          </dev>
+          <dev class="榜單圖片"></dev>
+        </dev>
+        <dev class="榜單2">
+          <dev class="榜單介紹欄">
+            <dev class="榜單內文 內文字形"></dev>
+          </dev>
+          <dev class="榜單圖片"></dev>
+        </dev>
+      </dev>
+    </dev>
+    <dev class="底欄">
+      <dev class="校徽"></dev>
+      <dev class="底欄文字">楠梓校區81157 高雄市楠梓區海專路142號海天樓三樓
+        <br>電話：07-3617141 #23595
+        <br>E-mail: ckoffice01@nkust.edu.tw</dev>
+    </dev>
+  </body>
+</html>

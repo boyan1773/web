@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>boyan</title>
+  </head>
+  <body>
+    <h3>register</h3>
+    <form method="POST">
+      {%csrf_token%}
+      {{form.as_p}}
+    <input type = "submit"value="申請"/>
+    </form>
+  </body>
+</html>
