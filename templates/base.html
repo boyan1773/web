@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html ln="en">
+<style>
+    .footer
+  {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    left: 0px;
+    top: 1301px;
+
+    background: #A7D7C4;
+  }
+  .footertxt
+  {
+    position: absolute;
+    width: 271px;
+    height: 138px;
+    left: 35%;
+    top: 31px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: #5C8D89;
+  }
+  .nkustlogo
+  {
+    position: absolute;
+    width: 366px;
+    height: 68px;
+    left: 10%;
+    top: 66px;
+
+    background: url('{% static "logo.png" %}');
+  }
+</style>    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %} {% endblock %}</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">  
+    </head>
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg bg-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="">H</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/lotto/">lotto</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/bmi/">bmi</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="">Action</a></li>
+                        <li><a class="dropdown-item" href="">Another action</a></li>
+                        <li><a class="dropdown-item" href="">Something else here</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            </nav>
+            <div class="container-fluid">
+                {% block titlemessage %} {% endblock %}
+                {% block content %} {% endblock %}
+            </div>
+            <div class="container-fluid">
+                <dev class="footer">
+                    <dev class="nkustlogo"></dev>
+                    <dev class="footertxt">楠梓校區81157 高雄市楠梓區海專路142號海天樓三樓
+                      <br>電話：07-3617141 #23595
+                      <br>E-mail: ckoffice01@nkust.edu.tw</dev>
+                  </dev>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </body>
+</html>
